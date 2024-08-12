@@ -6,8 +6,8 @@ from pdf2image import convert_from_path
 
 app = Flask(__name__)
 #connect_str = 'AZURE_STORAGE_CONNECTION_STRING'
-connect_str = 'DefaultEndpointsProtocol=https;AccountName=azurestoragejohn;AccountKey=fLwItsy7VK8Kya39V529l9euIUG8IXHKLVva7XNYm65fY4AeVzYyxxjSGHXFa0U4iYzDlPtLrbux+AStwgEhBA==;EndpointSuffix=core.windows.net'
-#connect_str = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
+#connect_str = ''
+connect_str = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
 if not connect_str:
     raise ValueError("Please set your environment variable 'AZURE_STORAGE_CONNECTION_STRING'")
 
